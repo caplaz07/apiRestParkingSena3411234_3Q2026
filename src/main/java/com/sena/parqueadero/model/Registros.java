@@ -22,11 +22,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table(name = "Registros")
+@Table(name = "registros")
 public class Registros {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-
 	private Long idRegistro;
 	private LocalDateTime fechaHoraIngreso;
 	@Column(nullable = false)
@@ -34,7 +33,6 @@ public class Registros {
 	private Double valorPagado;
 	@Column(nullable = false)
 	private Boolean activo = true;
-
 
 	@ManyToOne
 	@JoinColumn(name = "idVehiculo", nullable = false)

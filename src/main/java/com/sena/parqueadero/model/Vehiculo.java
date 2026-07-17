@@ -20,19 +20,17 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-@Table( name = "vehiculos" )
-
+@Table(name = "vehiculos")
 public class Vehiculo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long idVehiculo;
-	@Column(unique = true, nullable = false )
-private String placa;
-	@Enumerated (EnumType. STRING)
+	private Long idVehiculo;
+	@Column(unique = true, nullable = false)
+	private String placa;
+	@Enumerated(EnumType.STRING)
 	@Column(nullable = false)
 	private tipoVehiculo tipo;
-private String marca;
-private String modelo;
-	
-	
+	private String marca;
+	private String modelo;
+
 }
